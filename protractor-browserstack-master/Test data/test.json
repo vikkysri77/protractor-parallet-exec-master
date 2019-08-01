@@ -1,0 +1,4 @@
+{
+  "wholedata": "exports.config\n  = {\n  seleniumAddress: 'http://192.168.2.135:4444/wd/hub',\n multiCapabilities: [{\n'browserName': 'chrome',\n}],\nspecs: [ '../specs/iteration_one.js' ]\n};",
+  "spec_data": "describe('Front end login', function() {\n\n  it('Perform a front end login', function() {\n    browser.driver.get('https://qa.revature.com').then(function() {\n      browser.waitForAngular();\n      browser.driver.findElement(by.id('loginEmail')).sendKeys(data.usersEmail[0]);\n      browser.driver.findElement(by.id('loginPassword')).sendKeys('Pass123$\\n');\n      browser.sleep(5000);\n      expect(browser.driver.getTitle()).toEqual('RevaturePro - Dashboard');\n\n  });\n});\n});"
+}

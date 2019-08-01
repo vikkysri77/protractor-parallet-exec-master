@@ -1,5 +1,6 @@
 exports.config = {
-
+    // seleniumAddress: 'http://192.168.2.135:4444/wd/hub',
+    seleniumAddress: 'http://localhost:4444/wd/hub/',
   // /*Lambda test implementation*/
   //
   // seleniumAddress: 'https://sridharg:D4vZoGTaXga0AcDzU0DOhKeSUGH0qvIFFe6Kgo6SVLXQD82jun@hub.lambdatest.com/wd/hub',
@@ -25,31 +26,18 @@ exports.config = {
   //   'visual': true, //To Enable step by step screenshot
   //   'network': true,    //To capture Network logs
   //   'console': true,   //To capture Console Logs
-  //   'specs': [ '../specs/iteration_two.js' ]
+  //   'specs': [ '../specs/iteration_one.js' ]
   // }],
   //
   // SELENIUM_PROMISE_MANAGER: false
-  'multiCapabilities': [{
-      'os': 'Windows',
-      'os_version': '10',
-      'browserName': 'Chrome',
-      'browser_version': '75.0',
-      'chromeOptions': {
-      'args': ['--user-data-dir=C://Users//Revature//Desktop//protractor-Lambda test-master//profiles//profile 1']
-      },
-      'specs': [ '../specs/iteration_one.js' ]
-    },{
-      'os': 'Windows',
-      'os_version': '10',
-      'browserName': 'Chrome',
-      'browser_version': '75.0',
-      'chromeOptions': {
-          'args': ['--user-data-dir=C://Users//Revature//Desktop//protractor-Lambda test-master//profiles//profile 2']
-      },
-      'specs': [ '../specs/iteration_two.js' ]
+
+
+
+  multiCapabilities: [{
+        'browserName': 'chrome',
     }],
 
-
+    specs: [ '../specs/iteration_one.js' ]
 
 
 /*Browser stack implementation*/
@@ -74,14 +62,14 @@ exports.config = {
   //   'os_version': '10',
   //   'browserName': 'Chrome',
   //   'browser_version': '70.0',
-  //   'specs': [ '../specs/iteration_two.js' ]
+  //   'specs': [ '../specs/iteration_one.js' ]
   // },
   //   {
   //     'os' : 'OS X',
   //     'os_version' : 'Mojave',
   //     'browserName' : 'Safari',
   //     'browser_version' : '12.0',
-  //     'specs': [ '../specs/iteration_three.js' ]
+  //     'specs': [ '../specs/iteration_one.js' ]
   //   }],
 };
 
